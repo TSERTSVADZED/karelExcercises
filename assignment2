@@ -1,1 +1,18 @@
+//Assignment 2
+//Karel puts beepers on diagonal of any square type of world
+function main(){
+   fillDiagonal();
+   
+}
 
+
+function fillDiagonal(){
+   putBeeper();
+   while(frontIsClear()){
+      move();
+      turnLeft();
+      move();
+      turnRight();
+      putBeeper();
+   }
+}
