@@ -1,0 +1,28 @@
+//Assignment 3
+//Karel puts beepers on every second street
+function main(){
+   while(frontIsClear()){
+      move();
+      fillTheLine();
+      goToNextLine();
+   }
+}
+
+function fillTheLine(){
+   turnLeft();
+   repeat(3){
+      putBeeper();
+      move();
+   }
+   turnAround();
+   while(frontIsClear()){
+      move();
+   }
+   turnLeft();
+}
+
+function goToNextLine(){
+   if(frontIsClear()){
+      move();
+   }
+}
