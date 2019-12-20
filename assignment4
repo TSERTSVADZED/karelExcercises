@@ -1,0 +1,28 @@
+//Assignment 4
+//Karel fills whole wirld with the beepers
+function main(){
+   while(noBeepersPresent()){
+      fillTheLine();
+      goToNextLine();
+   }
+}
+
+function fillTheLine(){
+   putBeeper();
+   while(frontIsClear()){
+      move();
+      putBeeper();
+   }
+}
+
+function goToNextLine(){
+   if(leftIsClear()){
+      turnAround();
+      while(frontIsClear()){
+        move();
+      }
+      turnRight();
+      move();
+      turnRight();
+   }
+}
