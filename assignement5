@@ -1,0 +1,73 @@
+//a) Karel will put beeper in the center of 1st street and will 
+function main(){
+   findCenterOfFirstStreet();
+   putBeeper();
+}
+
+function findCenterOfFirstStreet(){
+   while(leftIsClear()){
+      move();
+      turnLeft();
+      move();
+      move();
+      turnRight();
+   }
+   turnRight();
+   while(frontIsClear()){
+      move();
+   }
+}
+
+
+
+function main(){
+   fillDiagonal();
+   goDown();
+   turnRight();
+   putBeeperOnCentre();
+   goDown();
+   goDown();
+   removeBeepersFromDiagonal();
+}
+
+function fillDiagonal(){
+   putBeeper();
+   while(leftIsClear()){
+      move();
+      turnLeft();
+      move();
+      putBeeper();
+      turnRight();
+   }
+}
+
+function goDown(){
+   turnRight();
+   
+   while(frontIsClear()){
+      move();
+   }
+}
+
+function putBeeperOnCentre(){
+   while(noBeepersPresent()){
+      move();
+      turnRight();      
+      move();
+      turnLeft();
+   }
+   putBeeper();
+   turnAround();
+}
+
+function removeBeepersFromDiagonal(){
+   turnAround();
+   pickBeeper();
+   while(leftIsClear()){
+      move();
+      turnLeft();
+      move();
+      pickBeeper();
+      turnRight();
+   }
+}
