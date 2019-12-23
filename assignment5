@@ -19,7 +19,7 @@ function findCenterOfFirstStreet(){
 }
 
 
-
+//b) Karell will put beeper in the center of the world
 function main(){
    fillDiagonal();
    goDown();
