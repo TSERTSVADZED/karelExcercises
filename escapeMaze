@@ -1,0 +1,19 @@
+//Karel will find way out from maze, Karel is following left line of maze, by checking left side until beepers present
+function main(){
+   findPath();
+}
+
+function findPath(){
+   while(noBeepersPresent()){
+      if(leftIsBlocked()){
+         if(frontIsClear()){
+            move();
+         }else {
+            turnRight();
+         }
+      }else {
+         turnLeft();
+         move();
+      }
+   }
+}
